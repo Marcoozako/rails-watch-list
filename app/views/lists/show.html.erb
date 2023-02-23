@@ -1,0 +1,15 @@
+<h1>La Best LIST DU MOMENT</h1>
+<%= @list.name %>
+<br>
+<p>Cool le film !</p>
+
+<h2>Bookmark</h2>
+<% @list.bookmarks.each do |l| %>
+<p><%= l.comment %></p>
+<%= link_to 'Delete',
+bookmark_path(l),
+data: {turbo_method: :delete, turbo_confirm: 'OUIIIIII'} %>
+<% end %>
+<br>
+<br>
+<%= link_to 'Back to the Street', lists_path %>

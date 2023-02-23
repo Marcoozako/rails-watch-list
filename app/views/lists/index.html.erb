@@ -1,0 +1,10 @@
+<h1>Listes l'index</h1>
+<ul>
+<% @lists.each do |list| %>
+<li><%= link_to list.name, list_path(list.id) %></li>
+
+<% end %>
+</ul>
+<br>
+<br>
+<p><%= link_to "Add a List", new_list_path %></p>
